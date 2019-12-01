@@ -42,13 +42,6 @@ Via Composer
 $ composer require ieim/laravel-contracts
 ```
 
-## Usage
-
-``` php
-$skeleton = new ieim\laravel-contracts();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
