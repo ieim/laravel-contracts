@@ -2,29 +2,38 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+After a couple of Laravel projects I ended up with similar problems solved on different projects. 
 
-## Structure
+This kind of sucked.
 
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
+Maintaining is a headache. Building features takes longer then it feels they should. And so on.
 
-```
-bin/        
-build/
-docs/
-config/
-src/
-tests/
-vendor/
-```
+So the idea came up, lets define interfaces which are similar across all.
 
+Thinking further I thought you know what, lets define two types of interfaces.
 
+We have abilities or ability bundles.
+
+*Abilities* provide one single function. Like in a *CRUD-Interface* we could provide a `indexable` ability, 
+which gives the class which implements it the ability to run an index function.
+
+*AbilityBundles* on the other hand, are sets which define multiple abilities or functions. Keeping the CRUD 
+example, we could imagine that a *CRUD-AbilityBundle* defines besides `indexable`, also `showable`, `saveable`, 
+`updatable` and so on.
+
+## A word on testing
+At first I was like, no need to test. 
+
+Thinking deeper, I realized, if there no tests, which implement the interfaces, this repo is useless.
+
+Simple because we can never be sure that those interfaces do their job.
+
+Additional goodie, we have objects which can be used in repositories which implement `laravel-contracts`.  
+
+So feel free to use `tests/Dummies` in you testcases.
+ 
 ## Install
 
 Via Composer
@@ -56,7 +65,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT
 
 ## Security
 
-If you discover any security related issues, please email this@marceichenseher.de instead of using the issue tracker.
+If you discover any security related issues, consider sending me an email to this@marceichenseher.de instead of using the issue tracker.
 
 ## Credits
 
@@ -75,9 +84,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-downloads]: https://img.shields.io/packagist/dt/ieim/laravel-contracts.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/ieim/laravel-contracts
-[link-travis]: https://travis-ci.org/ieim/laravel-contracts
-[link-scrutinizer]: https://scrutinizer-ci.com/g/ieim/laravel-contracts/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/ieim/laravel-contracts
 [link-downloads]: https://packagist.org/packages/ieim/laravel-contracts
 [link-author]: https://github.com/ieim
 [link-contributors]: ../../contributors
