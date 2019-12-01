@@ -23,8 +23,6 @@ class IndexableTest extends BaseTestCase
     }
 
     /**
-     * Test that true does in fact equal true
-     *
      * @param DummyIndexable $indexable
      * @dataProvider indexableProvider
      */

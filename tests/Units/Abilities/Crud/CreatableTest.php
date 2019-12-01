@@ -23,8 +23,6 @@ class CreatableTest extends BaseTestCase
     }
 
     /**
-     * Test that true does in fact equal true
-     *
      * @param DummyCreatable $creatable
      * @dataProvider creatableProvider
      */

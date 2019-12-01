@@ -23,8 +23,6 @@ class ShowableTest extends BaseTestCase
     }
 
     /**
-     * Test that true does in fact equal true
-     *
      * @param DummyShowable $showable
      * @dataProvider showableProvider
      */
