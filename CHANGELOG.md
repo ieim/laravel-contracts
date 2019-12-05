@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 
+### Changed
+- Iterated over naming of functions, classes, namespace and ended up renaming.
+
 ## [0.1.0] - 2019-01-01
 - Initial version
 
