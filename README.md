@@ -14,25 +14,24 @@ So the idea came up, lets define interfaces which are similar across all.
 
 Thinking further I thought you know what, lets define two types of interfaces.
 
-We have abilities or ability bundles.
+We have clauses or contracts.
 
-*Abilities* provide one single function. Like in a *CRUD-Interface* we could provide a `indexable` ability, 
-which gives the class which implements it the ability to run an index function.
+*Clauses* provide one single function. Like in a *CRUD-Interface* we could provide a `indexable` clause, 
+which gives the class which implements, the ability to run an index function.
 
-*AbilityBundles* on the other hand, are sets which define multiple abilities or functions. Keeping the CRUD 
-example, we could imagine that a *CRUD-AbilityBundle* defines besides `indexable`, also `showable`, `saveable`, 
-`updatable` and so on.
+*Contracts* on the other hand, are sets which define multiple clauses (or functions). Keeping the CRUD 
+example, there could be besides `indexable`, also `showable`, `saveable`, `...` for a CRUD-Contract.
 
 ## A word on testing
 At first I was like, no need to test. 
 
-Thinking deeper, I realized, if there no tests, which implement the interfaces, this repo is useless.
+Thinking deeper, I realized, if there are no tests, which implement the interfaces, this repo is useless.
 
 Simple because we can never be sure that those interfaces do their job.
 
 Additional goodie, we have objects which can be used in repositories which implement `laravel-contracts`.  
 
-So feel free to use `tests/Dummies` in you testcases.
+So feel free to use `tests/Dummies` in your testcases.
  
 ## Install
 
