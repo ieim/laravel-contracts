@@ -1,8 +1,8 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Dummies\Contracts;
+namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Contracts\RawResponseInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
 use Illuminate\Support\Collection;
 
 class DummyRawResponse implements RawResponseInterface

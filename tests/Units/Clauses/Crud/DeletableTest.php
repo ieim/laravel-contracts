@@ -2,7 +2,7 @@
 
 namespace Ieim\LaravelContracts\Tests\Clauses\Crud;
 
-use Ieim\LaravelContracts\Contracts\RawResponseResolverInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Ieim\LaravelContracts\Dummies\Clauses\Crud\DummyDeletable;
 use Ieim\LaravelContracts\Dummies\Clauses\Laravel\DummyValidatesWhenResolvedTrue;
 use Ieim\LaravelContracts\Tests\BaseTestCase;

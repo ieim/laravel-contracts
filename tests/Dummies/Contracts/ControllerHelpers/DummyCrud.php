@@ -1,9 +1,9 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Dummies\Contracts;
+namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Contracts\RawResponseResolverInterface;
-use Ieim\LaravelContracts\Contracts\CrudInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\CrudInterface;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
 class DummyCrud implements CrudInterface

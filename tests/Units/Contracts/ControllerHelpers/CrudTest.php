@@ -1,10 +1,10 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Tests\Contracts;
+namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Contracts\RawResponseResolverInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Ieim\LaravelContracts\Dummies\Clauses\Laravel\DummyValidatesWhenResolvedTrue;
-use Ieim\LaravelContracts\Dummies\Contracts\DummyCrud;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyCrud;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 

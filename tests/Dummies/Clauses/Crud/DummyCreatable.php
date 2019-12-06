@@ -3,8 +3,8 @@
 namespace Ieim\LaravelContracts\Dummies\Clauses\Crud;
 
 use Ieim\LaravelContracts\Clauses\Crud\Creatable;
-use Ieim\LaravelContracts\Contracts\RawResponseResolverInterface;
-use Ieim\LaravelContracts\Dummies\Contracts\DummyRawResponseResolver;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyRawResponseResolver;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
 class DummyCreatable implements Creatable

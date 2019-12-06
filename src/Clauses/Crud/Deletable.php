@@ -2,7 +2,7 @@
 
 namespace Ieim\LaravelContracts\Clauses\Crud;
 
-use Ieim\LaravelContracts\Contracts\RawResponseResolverInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
 interface Deletable

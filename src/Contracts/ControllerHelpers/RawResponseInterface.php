@@ -1,6 +1,6 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Contracts;
+namespace Ieim\LaravelContracts\Contracts\ControllerHelpers;
 
 use Illuminate\Support\Collection;
 use InvalidArgumentException;

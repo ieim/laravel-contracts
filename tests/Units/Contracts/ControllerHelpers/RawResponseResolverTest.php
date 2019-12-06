@@ -1,9 +1,9 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Tests\Contracts;
+namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Dummies\Contracts\DummyRawResponseResolver;
-use Ieim\LaravelContracts\Dummies\Contracts\DummyRawResponse;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyRawResponseResolver;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyRawResponse;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
