@@ -2,6 +2,7 @@
 
 namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 
+use Exception;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
 use Illuminate\Support\Collection;
 
@@ -38,6 +39,7 @@ class DummyRawResponse implements RawResponseInterface
      */
     public function append(Collection $collectionToMerge): void
     {
+        throw new Exception('dummy_append');
     }
 
     /**
@@ -45,5 +47,6 @@ class DummyRawResponse implements RawResponseInterface
      */
     public function appendAssocArray(array $collectionToMerge): void
     {
+        throw new Exception('dummy_append_assoc_array');
     }
 }
