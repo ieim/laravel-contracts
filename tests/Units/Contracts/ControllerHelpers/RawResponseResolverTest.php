@@ -51,4 +51,22 @@ class RawResponseResolverTest extends BaseTestCase
 
         $this->assertInstanceOf($expected, $actual);
     }
+
+    /**
+     * @param DummyRawResponseResolver $rawResponseResolver
+     * @param DummyRawResponse $rawResponse
+     * @dataProvider rawResponseResolverProvider
+     */
+    public function testToResponse(
+        DummyRawResponseResolver $rawResponseResolver,
+        DummyRawResponse $rawResponse
+    ) : void {
+
+        Mockery::mock('Illuminate\Http\JsonResponse');
+
+        $expected = JsonResponse::class;
+        $actual = $rawResponseResolver->toResponse('', $rawResponse);
+
+        $this->assertInstanceOf($expected, $actual);
+    }
 }

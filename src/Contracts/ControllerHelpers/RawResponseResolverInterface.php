@@ -9,4 +9,5 @@ interface RawResponseResolverInterface
 {
     public function toView(RawResponseInterface $response): View;
     public function toJson(RawResponseInterface $response): JsonResponse;
+    public function toResponse(string $jsonResourceName, RawResponseInterface $response): JsonResponse;
 }

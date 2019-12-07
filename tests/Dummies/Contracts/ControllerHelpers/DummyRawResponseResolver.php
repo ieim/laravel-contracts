@@ -19,4 +19,9 @@ class DummyRawResponseResolver implements RawResponseResolverInterface
     {
         return new JsonResponse();
     }
+
+    public function toResponse(string $jsonResourceName, RawResponseInterface $response): JsonResponse
+    {
+        return new JsonResponse();
+    }
 }
