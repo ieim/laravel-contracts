@@ -31,14 +31,6 @@ class DummyRawResponse implements RawResponseInterface
     /**
      * @inheritDoc
      */
-    public function path(): string
-    {
-        return 'dummy_path';
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function data(): Collection
     {
         return collect([

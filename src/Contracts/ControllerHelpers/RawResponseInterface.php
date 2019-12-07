@@ -41,13 +41,6 @@ interface RawResponseInterface
     ): RawResponseInterface;
 
     /**
-     * Retrieve the template path.
-     *
-     * @return string
-     */
-    public function path(): string;
-
-    /**
      * Retrieve data.
      *
      * @return Collection

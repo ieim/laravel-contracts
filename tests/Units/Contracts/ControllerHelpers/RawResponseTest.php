@@ -54,20 +54,6 @@ class RawResponseTest extends BaseTestCase
      * @param DummyRawResponse $rawResponse
      * @dataProvider rawResponseProvider
      */
-    public function testPath(
-        DummyRawResponse $rawResponse
-    ) : void {
-
-        $expected = 'dummy_path';
-        $actual = $rawResponse->path();
-
-        $this->assertEquals($expected, $actual);
-    }
-
-    /**
-     * @param DummyRawResponse $rawResponse
-     * @dataProvider rawResponseProvider
-     */
     public function testData(
         DummyRawResponse $rawResponse
     ) : void {
