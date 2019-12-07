@@ -28,7 +28,7 @@ class OperationTest extends BaseTestCase
      * @param DummyOperation $operation
      * @dataProvider operationProvider
      */
-    public function testPath(
+    public function testCurrent(
         DummyOperation $operation
     ) : void {
 
