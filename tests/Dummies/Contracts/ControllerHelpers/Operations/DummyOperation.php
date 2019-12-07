@@ -2,8 +2,8 @@
 
 namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Operations;
 
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\CrudInterface;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
+use Illuminate\Support\Collection;
 
 class DummyOperation implements OperationInterface
 {
@@ -11,8 +11,7 @@ class DummyOperation implements OperationInterface
      * @inheritDoc
      */
     public static function fromCrudController(
-        string $operation,
-        CrudInterface $crud
+        string $operation
     ): OperationInterface {
 
         return new DummyOperation();
@@ -24,5 +23,13 @@ class DummyOperation implements OperationInterface
     public function current(): string
     {
         return 'dummy_current';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function operations(): Collection
+    {
+        return collect();
     }
 }

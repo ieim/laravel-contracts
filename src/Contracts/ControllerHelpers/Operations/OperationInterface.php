@@ -2,7 +2,7 @@
 
 namespace Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations;
 
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\CrudInterface;
+use Illuminate\Support\Collection;
 
 interface OperationInterface
 {
@@ -18,19 +18,24 @@ interface OperationInterface
      * Magic generation of Operation::class object.
      *
      * @param string $operation
-     * @param CrudInterface $crud
+     * @throw InvalidArgumentException when $operation is invalid
      * @return OperationInterface
      */
     public static function fromCrudController(
-        string $operation,
-        CrudInterface $crud
+        string $operation
     ): OperationInterface;
 
     /**
      * Retrieve current operation.
      *
-     * @param array $collectionToMerge
-     * @return void
+     * @return string
      */
     public function current(): string;
+
+    /**
+     * Retrieve all operation.
+     *
+     * @return Collection
+     */
+    public function operations(): Collection;
 }
