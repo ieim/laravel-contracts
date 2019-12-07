@@ -3,6 +3,7 @@
 namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers;
 
 use Exception;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
 use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyRawResponse;
 use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Operations\DummyOperation;
@@ -65,6 +66,20 @@ class RawResponseTest extends BaseTestCase
 
         $this->assertInstanceOf(Collection::class, $actual);
         $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * @param DummyRawResponse $rawResponse
+     * @dataProvider rawResponseProvider
+     */
+    public function testOperation(
+        DummyRawResponse $rawResponse
+    ) : void {
+
+        $expected = OperationInterface::class;
+        $actual = $rawResponse->operation();
+
+        $this->assertInstanceOf($expected, $actual);
     }
 
     /**

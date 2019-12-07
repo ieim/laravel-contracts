@@ -5,6 +5,7 @@ namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 use Exception;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Operations\DummyOperation;
 use Illuminate\Support\Collection;
 
 class DummyRawResponse implements RawResponseInterface
@@ -36,6 +37,14 @@ class DummyRawResponse implements RawResponseInterface
         return collect([
             'dummy' => 'data',
         ]);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function operation(): OperationInterface
+    {
+        return new DummyOperation();
     }
 
     /**

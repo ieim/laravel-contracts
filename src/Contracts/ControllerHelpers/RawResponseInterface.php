@@ -3,6 +3,7 @@
 namespace Ieim\LaravelContracts\Contracts\ControllerHelpers;
 
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
+use Ieim\LaravelControllerHelpers\Operations\Operation;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
 
@@ -46,6 +47,13 @@ interface RawResponseInterface
      * @return Collection
      */
     public function data(): Collection;
+
+    /**
+     * Retrieve operation.
+     *
+     * @return OperationInterface
+     */
+    public function operation(): OperationInterface;
 
     /**
      * Append a collection to current data set.
