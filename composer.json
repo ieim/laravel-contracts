@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Ieim\\LaravelContracts\\": "src"
+            "Ieim\\LaravelContracts\\": "src",
+            "Ieim\\LaravelContracts\\Dummies\\": "src/Dummies"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ieim\\LaravelContracts\\Tests\\": "tests/Units",
-            "Ieim\\LaravelContracts\\Dummies\\": "tests/Dummies"
+            "Ieim\\LaravelContracts\\Tests\\": "tests/Units"
         }
     },
     "scripts": {
