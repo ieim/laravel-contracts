@@ -2,12 +2,14 @@
 
 namespace Ieim\LaravelContracts\Contracts\ControllerHelpers\Paths;
 
+use Ieim\LaravelContracts\Contracts\Domains\DomainInterface;
+
 interface PathFactoryInterface
 {
     /**
      * @param string $type
-     * @param string $domainName
-     * @return PathFactoryInterface
+     * @param DomainInterface $domain
+     * @return PathInterface
      */
-    public static function build(string $type, string $domainName): PathInterface;
+    public static function build(string $type, DomainInterface $domain): PathInterface;
 }
