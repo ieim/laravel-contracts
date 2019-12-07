@@ -2,8 +2,8 @@
 
 namespace Ieim\LaravelContracts\Tests;
 
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
-use \Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 
 class BaseTestCase extends TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\CrudInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
 class DummyCrud implements CrudInterface

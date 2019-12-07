@@ -2,8 +2,8 @@
 
 namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers;
 
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseResolverInterface;
 use Ieim\LaravelContracts\Dummies\Clauses\Laravel\DummyView;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
