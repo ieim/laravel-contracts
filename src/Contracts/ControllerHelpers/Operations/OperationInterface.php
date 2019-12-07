@@ -14,6 +14,16 @@ interface OperationInterface
     const OPERATION_SHOW = 'show';
     const OPERATION_UPDATE = 'update';
 
+    const OPERATIONS_CRUD = [
+        self::OPERATION_INDEX,
+        self::OPERATION_CREATE,
+        self::OPERATION_DELETE,
+        self::OPERATION_EDIT,
+        self::OPERATION_SAVE,
+        self::OPERATION_SHOW,
+        self::OPERATION_UPDATE,
+    ];
+
     /**
      * Magic generation of Operation::class object.
      *
