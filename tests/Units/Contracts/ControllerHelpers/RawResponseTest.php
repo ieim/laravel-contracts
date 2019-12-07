@@ -2,8 +2,10 @@
 
 namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers;
 
+use Exception;
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\RawResponseInterface;
 use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\DummyRawResponse;
+use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Operations\DummyOperation;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 use Illuminate\Support\Collection;
 
@@ -16,13 +18,34 @@ class RawResponseTest extends BaseTestCase
         ];
     }
 
+    public function operationProvider(): array
+    {
+        return [
+            [ new DummyOperation() ],
+        ];
+    }
+
     /**
-     * @param DummyRawResponse $rawResponse
+     * @dataProvider operationProvider
+     * @param DummyOperation $operation
      */
-    public function testFromController() :void
+    public function testFromController(DummyOperation $operation) :void
     {
         $expected = RawResponseInterface::class;
-        $actual = DummyRawResponse::fromController('');
+        $actual = DummyRawResponse::fromController($operation);
+
+        $this->assertInstanceOf($expected, $actual);
+    }
+
+    /**
+     * @dataProvider operationProvider
+     * @param DummyOperation $operation
+     */
+    public function testFromControllerWithData(DummyOperation $operation) :void
+    {
+        $data = collect();
+        $expected = RawResponseInterface::class;
+        $actual = DummyRawResponse::fromControllerWithData($operation, $data);
 
         $this->assertInstanceOf($expected, $actual);
     }
@@ -60,6 +83,7 @@ class RawResponseTest extends BaseTestCase
 
     /**
      * @param DummyRawResponse $rawResponse
+     * @throws Exception
      * @dataProvider rawResponseProvider
      */
     public function testAppend(
@@ -74,6 +98,7 @@ class RawResponseTest extends BaseTestCase
 
     /**
      * @param DummyRawResponse $rawResponse
+     * @throws Exception
      * @dataProvider rawResponseProvider
      */
     public function testAppendAssocArray(
@@ -84,5 +109,19 @@ class RawResponseTest extends BaseTestCase
         $expected = 'dummy_append_assoc_array';
         $this->expectErrorMessage($expected);
         $rawResponse->appendAssocArray($append);
+    }
+
+    /**
+     * @param DummyRawResponse $rawResponse
+     * @throws Exception
+     * @dataProvider rawResponseProvider
+     */
+    public function testReset(
+        DummyRawResponse $rawResponse
+    ) : void {
+
+        $expected = 'dummy_reset';
+        $this->expectErrorMessage($expected);
+        $rawResponse->reset();
     }
 }

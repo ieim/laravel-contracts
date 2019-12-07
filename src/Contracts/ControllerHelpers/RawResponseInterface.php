@@ -2,6 +2,7 @@
 
 namespace Ieim\LaravelContracts\Contracts\ControllerHelpers;
 
+use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
 
@@ -9,16 +10,35 @@ interface RawResponseInterface
 {
     /**
      * Magic generation of a $rawResponse object.
-     * Simply call this function with the crud function name (eg. 'index') your
-     * controller is in. And it will build itself with the appropriate paths.
+     * When we create a object via this constructor, it will automagically create
+     * appropriated paths for us.
      *
      * If you want to append the paths manually consider initializing the object with
      * default constructor.
      *
-     * @param string $operation
+     * @param OperationInterface $operation
      * @return RawResponseInterface
      */
-    public static function fromController(string $operation): RawResponseInterface;
+    public static function fromController(OperationInterface $operation): RawResponseInterface;
+
+    /**
+     * Magic generation of a $rawResponse object and set data set.
+     * When we create a object via this constructor, it will automagically create
+     * appropriated paths for us.
+     *
+     * After that it will append data to the current object.
+     *
+     * If you want to append the paths manually consider initializing the object with
+     * default constructor.
+     *
+     * @param OperationInterface $operation
+     * @param Collection $data
+     * @return RawResponseInterface
+     */
+    public static function fromControllerWithData(
+        OperationInterface $operation,
+        Collection $data
+    ): RawResponseInterface;
 
     /**
      * Retrieve the template path.
@@ -38,19 +58,26 @@ interface RawResponseInterface
      * Append a collection to current data set.
      * Usually [key => (mixed) value].
      *
-     * @param Collection $collectionToMerge
+     * @param Collection $dataToMerge
      * @throws InvalidArgumentException if no key is specified
      * @return void
      */
-    public function append(Collection $collectionToMerge): void;
+    public function append(Collection $dataToMerge): void;
 
     /**
      * Append a associative array to current data set.
      * Usually [key => (mixed) value].
      *
-     * @param array $collectionToMerge
+     * @param array $dataToMerge
      * @throws InvalidArgumentException if no key is specified
      * @return void
      */
-    public function appendAssocArray(array $collectionToMerge): void;
+    public function appendAssocArray(array $dataToMerge): void;
+
+    /**
+     * Reset current data set, basically remove every index.
+     *
+     * @return void
+     */
+    public function reset(): void;
 }
