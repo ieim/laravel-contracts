@@ -32,4 +32,12 @@ class DummyOperation implements OperationInterface
     {
         return collect();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function isValid(): bool
+    {
+        return true;
+    }
 }

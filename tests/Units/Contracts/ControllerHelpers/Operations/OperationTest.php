@@ -42,6 +42,19 @@ class OperationTest extends BaseTestCase
      * @param DummyOperation $operation
      * @dataProvider operationProvider
      */
+    public function testIsValid(
+        DummyOperation $operation
+    ) : void {
+
+        $actual = $operation->isValid();
+
+        $this->assertTrue($actual);
+    }
+
+    /**
+     * @param DummyOperation $operation
+     * @dataProvider operationProvider
+     */
     public function testOperations(
         DummyOperation $operation
     ) : void {

@@ -33,6 +33,13 @@ interface OperationInterface
     public function current(): string;
 
     /**
+     * Does current operations contain current operation?
+     *
+     * @return bool
+     */
+    public function isValid(): bool;
+
+    /**
      * Retrieve all operation.
      *
      * @return Collection
