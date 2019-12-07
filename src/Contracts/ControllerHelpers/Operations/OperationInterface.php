@@ -15,9 +15,7 @@ interface OperationInterface
     const OPERATION_UPDATE = 'update';
 
     /**
-     * Magic generation of a $rawResponse object.
-     * Simply call this function with the crud function name (eg. 'index') your
-     * controller is in.
+     * Magic generation of Operation::class object.
      *
      * @param string $operation
      * @param CrudInterface $crud
