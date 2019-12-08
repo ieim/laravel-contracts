@@ -6,10 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- `OperationInterface` for a testable way to work with operations.
+- Added path contracts.
 
 ### Changed
 - Iterated over naming of functions, classes, namespace and ended up.
+- Moved Dummies from `tests/` into `src/`.
 
 ## [0.1.0] - 2019-01-01
 - Initial version
