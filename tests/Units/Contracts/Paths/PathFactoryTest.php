@@ -1,10 +1,10 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers\Paths;
+namespace Ieim\LaravelContracts\Tests\Contracts\Paths;
 
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\Paths\PathInterface;
-use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Paths\DummyPathFactory;
-use Ieim\LaravelContracts\Dummies\Contracts\Domains\DummyDomain;
+use Ieim\LaravelContracts\Contracts\Paths\PathInterface;
+use Ieim\LaravelContracts\Dummies\Contracts\Paths\DummyPathFactory;
+use Ieim\LaravelContracts\Dummies\Contracts\Paths\Domains\DummyDomain;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 
 class PathFactoryTest extends BaseTestCase

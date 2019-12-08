@@ -1,8 +1,8 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Tests\Contracts\Domains;
+namespace Ieim\LaravelContracts\Tests\Contracts\Paths\Domains;
 
-use Ieim\LaravelContracts\Dummies\Contracts\Domains\DummyDomain;
+use Ieim\LaravelContracts\Dummies\Contracts\Paths\Domains\DummyDomain;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 
 class DomainTest extends BaseTestCase

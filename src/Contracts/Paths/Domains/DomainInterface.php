@@ -1,6 +1,6 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Contracts\Domains;
+namespace Ieim\LaravelContracts\Contracts\Paths\Domains;
 
 interface DomainInterface
 {

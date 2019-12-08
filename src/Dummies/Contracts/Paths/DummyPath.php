@@ -1,9 +1,9 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Paths;
+namespace Ieim\LaravelContracts\Dummies\Contracts\Paths;
 
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
-use Ieim\LaravelContracts\Contracts\ControllerHelpers\Paths\PathInterface;
+use Ieim\LaravelContracts\Contracts\Paths\PathInterface;
 
 class DummyPath implements PathInterface
 {

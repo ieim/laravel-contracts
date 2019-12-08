@@ -1,8 +1,8 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Dummies\Contracts\Domains;
+namespace Ieim\LaravelContracts\Dummies\Contracts\Paths\Domains;
 
-use Ieim\LaravelContracts\Contracts\Domains\DomainInterface;
+use Ieim\LaravelContracts\Contracts\Paths\Domains\DomainInterface;
 
 class DummyDomain implements DomainInterface
 {

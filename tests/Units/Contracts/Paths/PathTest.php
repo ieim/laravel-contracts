@@ -1,9 +1,9 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Tests\Contracts\ControllerHelpers\Paths;
+namespace Ieim\LaravelContracts\Tests\Contracts\Paths;
 
 use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Operations\DummyOperation;
-use Ieim\LaravelContracts\Dummies\Contracts\ControllerHelpers\Paths\DummyPath;
+use Ieim\LaravelContracts\Dummies\Contracts\Paths\DummyPath;
 use Ieim\LaravelContracts\Tests\BaseTestCase;
 
 class PathTest extends BaseTestCase

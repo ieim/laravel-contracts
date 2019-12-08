@@ -1,8 +1,8 @@
 <?php declare(strict_types=1); // -*- coding: utf-8 -*-
 
-namespace Ieim\LaravelContracts\Contracts\ControllerHelpers\Paths;
+namespace Ieim\LaravelContracts\Contracts\Paths;
 
-use Ieim\LaravelContracts\Contracts\Domains\DomainInterface;
+use Ieim\LaravelContracts\Contracts\Paths\Domains\DomainInterface;
 
 interface PathFactoryInterface
 {
