@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Iterated over naming of functions, classes, namespace and ended up.
 - Moved Dummies from `tests/` into `src/`.
+- PHP min to `~7.2`. 
 
 ## [0.1.0] - 2019-01-01
 - Initial version
