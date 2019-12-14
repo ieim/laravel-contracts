@@ -29,4 +29,34 @@ class PathTest extends BaseTestCase
 
         $this->assertEquals($expected, $actual);
     }
+
+    /**
+     * @param DummyPath $path
+     * @dataProvider pathProvider
+     */
+    public function testToResourceClassName(
+        DummyPath $path,
+        DummyOperation $operation
+    ) : void {
+
+        $expected = 'dummy_to_resource_class_name';
+        $actual = $path->toResourceClassName($operation);
+
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * @param DummyPath $path
+     * @dataProvider pathProvider
+     */
+    public function testType(
+        DummyPath $path,
+        DummyOperation $operation
+    ) : void {
+
+        $expected = 'dummy_type';
+        $actual = $path->type($operation);
+
+        $this->assertEquals($expected, $actual);
+    }
 }

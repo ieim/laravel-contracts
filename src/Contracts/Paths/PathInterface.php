@@ -21,6 +21,14 @@ interface PathInterface
     public function toString(OperationInterface $operation): string;
 
     /**
+     * Get the class name of this API Resource|Collection.
+     *
+     * @param OperationInterface $operation
+     * @return string
+     */
+    public function toResourceClassName(OperationInterface $operation): string;
+
+    /**
      * Retrieve type.
      *
      * @param OperationInterface $operation

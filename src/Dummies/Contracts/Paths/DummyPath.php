@@ -18,6 +18,14 @@ class DummyPath implements PathInterface
     /**
      * @inheritDoc
      */
+    public function toResourceClassName(OperationInterface $operation): string
+    {
+        return 'dummy_to_resource_class_name';
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function type(): string
     {
         return 'dummy_type';
