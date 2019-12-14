@@ -65,7 +65,7 @@ class RawResponseResolverTest extends BaseTestCase
         Mockery::mock('Illuminate\Http\JsonResponse');
 
         $expected = JsonResponse::class;
-        $actual = $rawResponseResolver->toResponse('', $rawResponse);
+        $actual = $rawResponseResolver->toResponse($rawResponse);
 
         $this->assertInstanceOf($expected, $actual);
     }
