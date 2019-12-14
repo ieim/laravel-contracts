@@ -2,9 +2,9 @@
 
 namespace Ieim\LaravelContracts\Dummies\Contracts\Paths;
 
+use Ieim\LaravelContracts\Contracts\Paths\Domains\DomainInterface;
 use Ieim\LaravelContracts\Contracts\Paths\PathFactoryInterface;
 use Ieim\LaravelContracts\Contracts\Paths\PathInterface;
-use Ieim\LaravelContracts\Contracts\Paths\Domains\DomainInterface;
 
 class DummyPathFactory implements PathFactoryInterface
 {

@@ -3,7 +3,6 @@
 namespace Ieim\LaravelContracts\Contracts\ControllerHelpers;
 
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
-use Ieim\LaravelControllerHelpers\Operations\Operation;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
 
