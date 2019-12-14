@@ -4,6 +4,7 @@ namespace Ieim\LaravelContracts\Dummies\Contracts\Paths;
 
 use Ieim\LaravelContracts\Contracts\ControllerHelpers\Operations\OperationInterface;
 use Ieim\LaravelContracts\Contracts\Paths\PathInterface;
+use Ieim\LaravelContracts\Dummies\Clauses\Laravel\DummyResource;
 
 class DummyPath implements PathInterface
 {
@@ -20,7 +21,7 @@ class DummyPath implements PathInterface
      */
     public function toResourceClassName(OperationInterface $operation): string
     {
-        return 'dummy_to_resource_class_name';
+        return DummyResource::class;
     }
 
     /**
