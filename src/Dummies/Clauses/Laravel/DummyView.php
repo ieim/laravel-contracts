@@ -4,6 +4,13 @@ namespace Ieim\LaravelContracts\Dummies\Clauses\Laravel;
 
 use Illuminate\Contracts\View\View;
 
+/**
+ * Class DummyView
+ * @package Ieim\LaravelContracts\Dummies\Clauses\Laravel
+ *
+ * We dont test third party code.
+ * @codeCoverageIgnore
+ */
 class DummyView implements View
 {
     /**
