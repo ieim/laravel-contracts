@@ -13,12 +13,12 @@ interface PathInterface
     const DEFAULT_TYPE = self::TYPE_JSON;
 
     /**
-     * Retrieve the template path.
+     * Retrieve the blade path.
      *
      * @param OperationInterface $operation
      * @return string
      */
-    public function toString(OperationInterface $operation): string;
+    public function toBlade(OperationInterface $operation): string;
 
     /**
      * Get the class name of this API Resource|Collection.

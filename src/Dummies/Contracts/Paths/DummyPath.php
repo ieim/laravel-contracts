@@ -11,9 +11,9 @@ class DummyPath implements PathInterface
     /**
      * @inheritDoc
      */
-    public function toString(OperationInterface $operation): string
+    public function toBlade(OperationInterface $operation): string
     {
-        return 'dummy_to_string';
+        return 'dummy_to_blade';
     }
 
     /**

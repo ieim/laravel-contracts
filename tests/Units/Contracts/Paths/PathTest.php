@@ -20,13 +20,13 @@ class PathTest extends BaseTestCase
      * @param DummyPath $path
      * @dataProvider pathProvider
      */
-    public function testToString(
+    public function testToBlade(
         DummyPath $path,
         DummyOperation $operation
     ) : void {
 
-        $expected = 'dummy_to_string';
-        $actual = $path->toString($operation);
+        $expected = 'dummy_to_blade';
+        $actual = $path->toBlade($operation);
 
         $this->assertEquals($expected, $actual);
     }
