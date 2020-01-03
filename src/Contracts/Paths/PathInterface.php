@@ -13,20 +13,13 @@ interface PathInterface
     const DEFAULT_TYPE = self::TYPE_JSON;
 
     /**
-     * Retrieve the blade path.
+     * Retrieve the resolve path.
+     * Resolve path could be a blade path, resource or collection.
      *
      * @param OperationInterface $operation
      * @return string
      */
-    public function toBlade(OperationInterface $operation): string;
-
-    /**
-     * Get the class name of this API Resource|Collection.
-     *
-     * @param OperationInterface $operation
-     * @return string
-     */
-    public function toResourceClassName(OperationInterface $operation): string;
+    public function resolve(OperationInterface $operation): string;
 
     /**
      * Retrieve type.
