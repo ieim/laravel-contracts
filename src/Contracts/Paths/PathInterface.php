@@ -9,6 +9,8 @@ interface PathInterface
     const TYPE_COLLECTION = 'COLLECTION';
     const TYPE_RESOURCE = 'RESOURCE';
     const TYPE_JSON = 'JSON';
+    const TYPE_TEMPLATE = 'TEMPLATE';
+    const TYPE_NULL = 'NULL';
 
     const DEFAULT_TYPE = self::TYPE_JSON;
 
