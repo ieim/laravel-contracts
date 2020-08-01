@@ -21,7 +21,7 @@ which gives the class which implements, the ability to run an index function.
 *Contracts* on the other hand, are sets which define multiple clauses (or functions). Keeping the CRUD 
 example, there could be besides `indexable`, also `showable`, `saveable`, `...` for a CRUD-Contract.
 
-## A word on testing
+## A word on dummies
 At first I was like, no need to test. 
 
 Thinking deeper, I realized, if there are no tests, which implement the interfaces, this repo is useless.

@@ -10,7 +10,6 @@ use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 class DummyCreatable implements Creatable
 {
     /**
-     * @param $id
      * @param ValidatesWhenResolved $request
      * @return RawResponseResolverInterface
      */

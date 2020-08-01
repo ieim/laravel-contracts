@@ -5,19 +5,18 @@ namespace Ieim\LaravelContracts\Dummies\Clauses\Laravel;
 use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 
 /**
- * Class DummyValidatesWhenResolvedTrue
+ * Class DummyValidatesWhenResolvedFalse
  * @package Ieim\LaravelContracts\Dummies\Clauses\Laravel
  *
  * We dont test third party code.
  * @codeCoverageIgnore
  */
-class DummyValidatesWhenResolvedTrue implements ValidatesWhenResolved
+class DummyValidatesWhenResolvedFalse implements ValidatesWhenResolved
 {
     /**
-     * @inheritDoc
+     * @return void
      */
-    public function validateResolved(): bool
+    public function validateResolved(): void
     {
-        return false;
     }
 }

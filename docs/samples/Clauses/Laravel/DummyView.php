@@ -14,23 +14,25 @@ use Illuminate\Contracts\View\View;
 class DummyView implements View
 {
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function render()
+    public function render(): string
     {
         return 'dummy_render';
     }
 
     /**
-     * @inheritDoc
+     * @return string
      */
-    public function name()
+    public function name(): string
     {
         return 'dummy_name';
     }
 
     /**
-     * @inheritDoc
+     * @param array|string $key
+     * @param mixed|null $value
+     * @return array|string
      */
     public function with($key, $value = null)
     {
@@ -38,7 +40,7 @@ class DummyView implements View
     }
 
     /**
-     * @inheritDoc
+     * @return array|string
      */
     public function getData()
     {

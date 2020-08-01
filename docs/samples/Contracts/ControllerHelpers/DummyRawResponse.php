@@ -11,7 +11,8 @@ use Illuminate\Support\Collection;
 class DummyRawResponse implements RawResponseInterface
 {
     /**
-     * @inheritDoc
+     * @param OperationInterface $operation
+     * @return RawResponseInterface
      */
     public static function fromController(OperationInterface $operation): RawResponseInterface
     {
@@ -19,7 +20,9 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @param OperationInterface $operation
+     * @param Collection $data
+     * @return RawResponseInterface
      */
     public static function fromControllerWithData(
         OperationInterface $operation,
@@ -30,7 +33,7 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @return Collection
      */
     public function data(): Collection
     {
@@ -40,7 +43,7 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @return OperationInterface
      */
     public function operation(): OperationInterface
     {
@@ -48,7 +51,8 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @param Collection $collectionToMerge
+     * @throws Exception
      */
     public function append(Collection $collectionToMerge): void
     {
@@ -56,7 +60,8 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @param array $collectionToMerge
+     * @throws Exception
      */
     public function appendAssocArray(array $collectionToMerge): void
     {
@@ -64,7 +69,7 @@ class DummyRawResponse implements RawResponseInterface
     }
 
     /**
-     * @inheritDoc
+     * @throws Exception
      */
     public function reset(): void
     {

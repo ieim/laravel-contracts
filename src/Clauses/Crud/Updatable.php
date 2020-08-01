@@ -8,7 +8,7 @@ use Illuminate\Contracts\Validation\ValidatesWhenResolved;
 interface Updatable
 {
     /**
-     * @param $id
+     * @param string|int $id
      * @param ValidatesWhenResolved $request
      * @return RawResponseResolverInterface
      */

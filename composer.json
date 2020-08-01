@@ -20,23 +20,16 @@
         "php": ">=7.3.0"
     },
     "require-dev": {
-        "illuminate/contracts": "^6.6",
-        "mockery/mockery": "^1.3",
-        "phpunit/phpunit": "~8.4.0",
-        "squizlabs/php_codesniffer": "^3.0"
+        "laravel/framework": "^5.8.0",
+        "squizlabs/php_codesniffer": "^3.0.0",
+        "vimeo/psalm": "^3.13"
     },
     "config": {
         "sort-packages": true
     },
     "autoload": {
         "psr-4": {
-            "Ieim\\LaravelContracts\\": "src",
-            "Ieim\\LaravelContracts\\Dummies\\": "src/Dummies"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ieim\\LaravelContracts\\Tests\\": "tests/Units"
+            "Ieim\\LaravelContracts\\": "src"
         }
     },
     "scripts": {
